@@ -1,8 +1,13 @@
-import React from 'react'
 
-const Feeds = () => {
+import Thumbnail from './Thumbnail'
+
+const Feeds = ({results}) => {
   return (
-    <div>Feeds</div>
+    <div>
+        {results.map(result => {
+            <Thumbnail key={result.id} result={result}/>
+        })
+        }</div>
   )
 }
 
